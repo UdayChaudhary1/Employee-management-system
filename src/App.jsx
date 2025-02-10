@@ -1,6 +1,10 @@
+import Login from "./components/Auth/Login";
+
 const App = () => {
   return (
-    <></>
-  )
-}
-export default App
+    <>
+      <Login />
+    </>
+  );
+};
+export default App;
