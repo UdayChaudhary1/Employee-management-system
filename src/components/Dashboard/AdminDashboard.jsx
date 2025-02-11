@@ -1,4 +1,4 @@
-import Header from "../other/Header"
+import Header from "../other/Header";
 
 const AdminDashboard = () => {
   return (
@@ -6,21 +6,30 @@ const AdminDashboard = () => {
       <Header />
       <div>
         <form>
-          <h3>Task Title</h3>
-          <input type="text" placeholder="Make UI design" />
-          <h3>Description</h3>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <h3>Date</h3>
-          <input type="date" />
-          <h3>Assign to</h3>
-          <input type="text" placeholder="employee name" />
-          <h3>Category</h3>
-          <input type="text" placeholder="design, dev, etc" />
+          <div>
+            <h3>Task Title</h3>
+            <input type="text" placeholder="Make UI design" />
+          </div>
+          <div>
+            <h3>Description</h3>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div>
+            <h3>Date</h3>
+            <input type="date" />
+          </div>
+          <div>
+            <h3>Assign to</h3>
+            <input type="text" placeholder="employee name" />
+          </div>
+          <div>
+            <h3>Category</h3>
+            <input type="text" placeholder="design, dev, etc" />
+          </div>
           <button>Create Task</button>
         </form>
       </div>
     </div>
-    
-  )
-}
-export default AdminDashboard
+  );
+};
+export default AdminDashboard;
