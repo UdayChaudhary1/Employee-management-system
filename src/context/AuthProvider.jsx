@@ -1,17 +1,26 @@
 import PropTypes from "prop-types";
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
+import { getLocalStorage } from "../utils/localStorage";
 
-export const AuthContext = createContext()
+export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  return <div>
-    <AuthContext.Provider value={"Uday"}>
-      {children}
-    </AuthContext.Provider>
-  </div>;
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const { employees, admin } = getLocalStorage();
+    setUserData({ employees, admin });
+  }, []);
+
+  return (
+    <div>
+      <AuthContext.Provider value={userData}>{children}</AuthContext.Provider>
+    </div>
+  );
 };
 
 AuthProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
 export default AuthProvider;
