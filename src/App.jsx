@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Login from "./components/Auth/Login";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -15,6 +16,6 @@ const App = () => {
     }
   };
 
-  return <></>;
+  return <>{!user ? <Login /> : ""}</>;
 };
 export default App;
