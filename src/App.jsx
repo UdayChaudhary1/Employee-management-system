@@ -16,6 +16,6 @@ const App = () => {
     }
   };
 
-  return <>{!user ? <Login /> : ""}</>;
+  return <>{!user ? <Login handleLogin={handleLogin} /> : ""}</>;
 };
 export default App;
